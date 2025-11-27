@@ -1,114 +1,145 @@
-# CONDUCKS
+<!-- @format -->
 
-**Collaborative Documentation & Knowledge System**
+<div align="center">
 
-> Intelligent, session-persistent documentation management for AI-powered development workflows
+# 🏗️ CONDUCKS
 
-## What is CONDUCKS?
+**Flexible Dual-Mode Project & Task Management System**
 
-CONDUCKS is an MCP (Model Context Protocol) server that solves the chaos of iterative AI coding. When vibe coding with AI agents, you lose track of changes, fixes, and their ripple effects across sessions. CONDUCKS provides **persistent job and task tracking** that survives session breaks, enabling true continuity in AI-assisted development.
+*Adaptive Single-Project & Multi-Project architectures for AI-powered development workflows*
 
-## The Problem We Solve
+[![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](https://github.com/conducks/conducks)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-🔄 **Session Amnesia**: AI agents forget everything when sessions restart  
-🤯 **Change Confusion**: You don't know what was changed, fixed, or broken  
-🔗 **Lost Context**: Cross-project tasks and dependencies get lost  
-📊 **No Traceability**: Can't track progress or understand the bigger picture
+*Transform development workspaces into intelligent project management systems*
 
-## The CONDUCKS Solution
+</div>
 
-✅ **Persistent Memory**: Jobs and tasks survive across all sessions  
-✅ **Hierarchical Organization**: Jobs contain tasks, tasks span projects  
-✅ **Smart Continuation**: Agents pick up exactly where they left off  
-✅ **Archive System**: Completed jobs move to archive for future reference  
-✅ **Cross-Project Tracking**: Handle dependencies between multiple projects  
-✅ **Agent Intelligence**: Analyze code, suggest improvements, connect context
+## 🌟 What Makes CONDUCKS Different
 
-## Repositories
+CONDUCKS revolutionizes how AI agents and developers collaborate by providing **persistent, evolving documentation** that adapts to your project's scale and complexity.
 
-### 🔧 [conducks-mcp](./CONDUCKS_SERVER)
-The MCP server implementation. Provides tools for job creation, task management, and persistent documentation organization.
+### 🎯 **Adaptive Architecture**
+- **Single-Project Mode**: Simple workflows with direct task organization
+- **Multi-Project Mode**: Component isolation for complex enterprise applications
+- **Automatic Detection**: Seamlessly adapts based on how you work
 
-**Features:**
-- Hierarchical Jobs→Tasks system with numbered IDs
-- TOON format for token-efficient storage
-- Real-time task status tracking
-- Cross-service dependency mapping
-- Automatic project structure mirroring
+### 📄 **Living Documentation**
+Tasks evolve from simple TODOs to comprehensive project artifacts through:
+- **Complete Rewrites**: Support for files up to 10MB
+- **Progressive Updates**: Unlimited incremental content additions
+- **Rich Formatting**: Technical specifications, code samples, and analysis
 
-### 📚 [conducks-docs](./DOCS)
-Complete documentation, implementation guides, and architecture specifications.
+### 🔧 **Enterprise-Grade Operations**
+- **16 MCP Tools**: Complete job/task lifecycle management
+- **Dynamic Path Resolution**: Prevents conflicts and maintains clean organization
+- **File Size Support**: Handle documentation as detailed as your project requires
+- **Token Efficiency**: Optimized TOON format reduces AI costs by ~64%
 
-### 🌐 conducks-web *(coming soon)*
-Web interface for visualizing jobs, tasks, and project progress.
+## 🏢 **Perfect For Every Team Size**
 
-## Quick Start
+- **🚀 Solo Developers**: Simple single-project workflows with powerful AI continuity
+- **👥 Small Teams**: Flexible organization that grows with your project
+- **🏢 Enterprise**: Multi-project architectures with component isolation
+- **🤖 AI-First Teams**: True session persistence enabling agent handoffs
+
+## ⚡ Quick Start
 
 ```bash
-# Clone the MCP server
-git clone https://github.com/YOUR_ORG/conducks-mcp.git
-cd conducks-mcp
+# For simple projects
+npm install conducks
+conducks.initialize_project_structure({ workspace_path: "my-app" })
+conducks.create_task({ workspace_path: "my-app", job_id: 1, title: "Setup API" })
 
-# Install and build
-npm install
-npm run build
-
-# Run the server
-node build/index.js
+# For complex applications
+conducks.initialize_project_structure({ workspace_path: "enterprise-system" })
+conducks.create_task({
+  workspace_path: "enterprise-system",
+  job_id: 1,
+  title: "Design backend architecture",
+  subproject: "api-service"
+})
 ```
 
-## How It Works
+## 🛠️ Core Capabilities
 
-1. **Create Jobs**: High-level goals organized by domain
-2. **Add Tasks**: Break jobs into actionable tasks across projects
-3. **Track Progress**: Update status as work progresses
-4. **Session Continuity**: Agent resumes exactly where it left off
-5. **Archive Completion**: Move finished jobs to archive
+### 📋 **Job & Task Management**
+- Hierarchical organization with automatic ID assignment
+- Progress tracking across complex, multi-phase projects
+- Status management with custom workflows
 
-## Architecture
+### 🎨 **Documentation Evolution**
+```typescript
+// Start simple
+create_task({ title: "Implement auth" })
 
+// Add technical depth
+append_task({ task_content: "## API Specification..." })
+
+// Complete documentation
+rewrite_domain({
+  domain_file: "task_001.md",
+  new_content: "# Complete Implementation Guide..."
+})
 ```
-CONDUCKS_SERVER/
-├── storage/              # Persistent storage (portable)
-│   ├── jobs.toon        # Jobs and tasks database
-│   └── <project>/       # Project-specific organization
-│       ├── to-do/       # Active tasks
-│       └── done-to-do/  # Completed tasks
-└── build/               # Compiled MCP server
-```
 
-## Use Cases
+### 🔍 **Intelligent Operations**
+- Architecture analysis and optimization recommendations
+- Cross-project dependency management
+- Real-time progress analytics
+- Search and discovery across all documentation
 
-- **Iterative Development**: Maintain context across multiple coding sessions
-- **Cross-Project Work**: Track dependencies between microservices
-- **Team Collaboration**: Share structured knowledge about ongoing work
-- **Progress Tracking**: Visualize what's done, active, and pending
-- **Knowledge Preservation**: Archive decisions and context for future reference
+## 📚 Comprehensive Documentation
 
-## Integration
+- **🗂️ [System Documentation](./DOCS/system/)**: Complete technical specifications
+- **🚀 [Workflow Guide](./DOCS/system/WORKFLOW_GUIDE.md)**: Step-by-step operational patterns
+- **🛠️ [Tool Reference](./DOCS/system/TOOL_REFERENCE.md)**: All 16 MCP tools with examples
+- **🏗️ [Architecture](./DOCS/system/ARCHITECTURE_OVERVIEW.md)**: Technical design principles
 
-Works with any MCP-compatible client:
-- ✅ Claude Desktop
-- ✅ Cline (VS Code)
-- ✅ Roo Code
-- ✅ Custom MCP clients
+## 🔗 Integration Ecosystem
 
-## Why CONDUCKS?
+CONDUCKS integrates seamlessly with modern development workflows:
 
-Traditional documentation becomes stale and disconnected. CONDUCKS keeps documentation **alive** by:
-- Tracking actual work as it happens
-- Connecting tasks to their context
-- Preserving intent and decisions
-- Enabling true AI-agent continuity
+- **🤖 AI Agents**: Claude Desktop, Cline, Roo Code, custom MCP clients
+- **🔧 IDEs**: VS Code, JetBrains, any MCP-compatible environment
+- **📊 CI/CD**: Automated documentation updates in deployment pipelines
+- **🌐 Cloud**: Portable storage works across local and cloud environments
 
-## Contributing
+## 🎯 Real-World Impact
 
-We welcome contributions! Check out individual repositories for specific contribution guidelines.
+**Before CONDUCKS:**
+- Lost context between AI agent sessions
+- Disconnected documentation and code changes
+- Inefficient cross-project coordination
 
-## License
+**After CONDUCKS:**
+- True AI-agent continuity across sessions
+- Living documentation that evolves with code
+- Cohesive project management regardless of scale
 
-MIT License - See individual repositories for details.
+## 🤝 Join Our Community
+
+CONDUCKS is open source and built by developers for developers. Whether you're:
+
+- Building AI-powered development workflows
+- Managing complex multi-service architectures
+- Creating tools for session-persistent AI collaboration
+
+We welcome contributions, feedback, and partnerships.
+
+### 📖 Resources
+
+- [📚 Documentation](./DOCS/)
+- [🐛 Bug Reports](https://github.com/conducks/conducks/issues)
+- [💡 Feature Requests](https://github.com/conducks/conducks/discussions)
+- [🤝 Contributing Guide](./CONTRIBUTING.md)
 
 ---
 
-**Built for developers who vibe code with AI and need their agents to remember.**
+<div align="center">
+
+**Building the future of AI-assisted development, one persistent task at a time.**
+
+*Made with ❤️ by the CONDUCKS team*
+
+</div>
