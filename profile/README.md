@@ -2,144 +2,105 @@
 
 <div align="center">
 
-# 🏗️ CONDUCKS
+# 🦆 CONDUCKS
 
-**Flexible Dual-Mode Project & Task Management System**
+**Engineering governance for AI coding agents.**
 
-*Adaptive Single-Project & Multi-Project architectures for AI-powered development workflows*
+*The MCP server that encodes senior engineering judgment into mandatory logic patterns.*
 
-[![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](https://github.com/conducks/conducks)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
-
-*Transform development workspaces into intelligent project management systems*
+[![Version](https://img.shields.io/badge/version-0.6.4-brightgreen.svg?style=flat-square&color=00ff66&labelColor=000)](https://github.com/Conducks/conducks)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square&color=00ff66&labelColor=000)](https://opensource.org/licenses/MIT)
+[![MCP](https://img.shields.io/badge/protocol-MCP-brightgreen.svg?style=flat-square&color=00ff66&labelColor=000)](https://github.com/modelcontextprotocol)
 
 </div>
 
-## 🌟 What Makes CONDUCKS Different
+---
 
-CONDUCKS revolutionizes how AI agents and developers collaborate by providing **persistent, evolving documentation** that adapts to your project's scale and complexity.
+## What We Build
 
-### 🎯 **Adaptive Architecture**
-- **Single-Project Mode**: Simple workflows with direct task organization
-- **Multi-Project Mode**: Component isolation for complex enterprise applications
-- **Automatic Detection**: Seamlessly adapts based on how you work
+**CONDUCKS** is an open-source [Model Context Protocol (MCP)](https://github.com/modelcontextprotocol) server.
 
-### 📄 **Living Documentation**
-Tasks evolve from simple TODOs to comprehensive project artifacts through:
-- **Complete Rewrites**: Support for files up to 10MB
-- **Progressive Updates**: Unlimited incremental content additions
-- **Rich Formatting**: Technical specifications, code samples, and analysis
+It acts as an **engineering constitution** for AI coding agents — enforcing planning discipline, execution standards, verification laws, and design rules at the tool level, so agents can't vibe-code their way through your codebase.
 
-### 🔧 **Enterprise-Grade Operations**
-- **16 MCP Tools**: Complete job/task lifecycle management
-- **Dynamic Path Resolution**: Prevents conflicts and maintains clean organization
-- **File Size Support**: Handle documentation as detailed as your project requires
-- **Token Efficiency**: Optimized TOON format reduces AI costs by ~64%
+---
 
-## 🏢 **Perfect For Every Team Size**
+## The Problem
 
-- **🚀 Solo Developers**: Simple single-project workflows with powerful AI continuity
-- **👥 Small Teams**: Flexible organization that grows with your project
-- **🏢 Enterprise**: Multi-project architectures with component isolation
-- **🤖 AI-First Teams**: True session persistence enabling agent handoffs
+AI agents by default:
 
-## ⚡ Quick Start
+- Skip planning and jump straight to code
+- Ship bugs because there's no mandatory verification step
+- Lose all context between sessions
+- Hardcode values, scatter types, and ignore architecture
+
+---
+
+## The Solution: 4-Phase Governance
+
+```
+Plan → Execute → Verify → Remember
+```
+
+Each phase is enforced by a dedicated MCP tool that returns mandatory rules agents must follow before proceeding.
+
+---
+
+## 7 Governance Tools
+
+| Tool | Phase | Enforces |
+|---|---|---|
+| `conducks.plan` | 1 | Codebase analysis, task atomicity, approval gates |
+| `conducks.execute` | 2 | Clean code mandates, root-cause fixation, orchestration |
+| `conducks.verify` | 3 | Test requirements, diff audits, output validation |
+| `conducks.memory` | 4 | Cross-session persistence of critical findings |
+| `conducks.documentation` | Standard | `docs/project/` lifecycle parity |
+| `conducks.design_style` | Standard | Anti-Vibe Manifesto, Tailwind v4 @theme |
+| `conducks.next_blueprint` | Standard | Service isolation, Manager Pattern |
+
+---
+
+## Quick Start
 
 ```bash
-# For simple projects
-npm install conducks
-conducks.initialize_project_structure({ workspace_path: "my-app" })
-conducks.create_task({ workspace_path: "my-app", job_id: 1, title: "Setup API" })
+# Clone
+git clone https://github.com/Conducks/conducks
 
-# For complex applications
-conducks.initialize_project_structure({ workspace_path: "enterprise-system" })
-conducks.create_task({
-  workspace_path: "enterprise-system",
-  job_id: 1,
-  title: "Design backend architecture",
-  subproject: "api-service"
-})
+# Build the MCP server
+cd conducks/conducks && npm install && npm run build
+
+# Add to your agent config (VS Code, Cursor, Antigravity, Windsurf, Claude Desktop...)
 ```
 
-## 🛠️ Core Capabilities
-
-### 📋 **Job & Task Management**
-- Hierarchical organization with automatic ID assignment
-- Progress tracking across complex, multi-phase projects
-- Status management with custom workflows
-
-### 🎨 **Documentation Evolution**
-```typescript
-// Start simple
-create_task({ title: "Implement auth" })
-
-// Add technical depth
-append_task({ task_content: "## API Specification..." })
-
-// Complete documentation
-rewrite_domain({
-  domain_file: "task_001.md",
-  new_content: "# Complete Implementation Guide..."
-})
+```json
+{
+  "conducks": {
+    "command": "node",
+    "args": ["/path/to/conducks/dist/index.js"]
+  }
+}
 ```
 
-### 🔍 **Intelligent Operations**
-- Architecture analysis and optimization recommendations
-- Cross-project dependency management
-- Real-time progress analytics
-- Search and discovery across all documentation
+---
 
-## 📚 Comprehensive Documentation
+## Repositories
 
-- **🗂️ [System Documentation](./DOCS/system/)**: Complete technical specifications
-- **🚀 [Workflow Guide](./DOCS/system/WORKFLOW_GUIDE.md)**: Step-by-step operational patterns
-- **🛠️ [Tool Reference](./DOCS/system/TOOL_REFERENCE.md)**: All 16 MCP tools with examples
-- **🏗️ [Architecture](./DOCS/system/ARCHITECTURE_OVERVIEW.md)**: Technical design principles
+| Repo | Description |
+|---|---|
+| [`conducks`](./conducks/) | The MCP server — 7 tools, 7 resources, governance rules |
+| [`website`](./website/) | This documentation site (Next.js 16 + Tailwind v4) |
 
-## 🔗 Integration Ecosystem
+---
 
-CONDUCKS integrates seamlessly with modern development workflows:
+## Works With
 
-- **🤖 AI Agents**: Claude Desktop, Cline, Roo Code, custom MCP clients
-- **🔧 IDEs**: VS Code, JetBrains, any MCP-compatible environment
-- **📊 CI/CD**: Automated documentation updates in deployment pipelines
-- **🌐 Cloud**: Portable storage works across local and cloud environments
-
-## 🎯 Real-World Impact
-
-**Before CONDUCKS:**
-- Lost context between AI agent sessions
-- Disconnected documentation and code changes
-- Inefficient cross-project coordination
-
-**After CONDUCKS:**
-- True AI-agent continuity across sessions
-- Living documentation that evolves with code
-- Cohesive project management regardless of scale
-
-## 🤝 Join Our Community
-
-CONDUCKS is open source and built by developers for developers. Whether you're:
-
-- Building AI-powered development workflows
-- Managing complex multi-service architectures
-- Creating tools for session-persistent AI collaboration
-
-We welcome contributions, feedback, and partnerships.
-
-### 📖 Resources
-
-- [📚 Documentation](./DOCS/)
-- [🐛 Bug Reports](https://github.com/conducks/conducks/issues)
-- [💡 Feature Requests](https://github.com/conducks/conducks/discussions)
-- [🤝 Contributing Guide](./CONTRIBUTING.md)
+VS Code · Cursor · Antigravity · Windsurf · Claude Desktop · Any MCP-compatible client
 
 ---
 
 <div align="center">
 
-**Building the future of AI-assisted development, one persistent task at a time.**
+*Getting your ducks in a row since 2025.*
 
-*Made with ❤️ by the CONDUCKS team*
+**[→ conducks.com](https://conducks.com)** · **[→ GitHub](https://github.com/Conducks/conducks)**
 
 </div>
