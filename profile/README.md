@@ -1,106 +1,71 @@
-<!-- @format -->
+# CONDUCKS 🦆
 
-<div align="center">
+> **The Engineering Constitution for AI Agents.**  
+> Encode senior engineering judgment into mandatory logic patterns.
 
-# 🦆 CONDUCKS
+[![Version](https://img.shields.io/badge/version-0.7.0-00ff66?style=flat-square&labelColor=000)](https://github.com/Conducks/conducks)
+[![License](https://img.shields.io/badge/license-Apache--2.0-00ff66?style=flat-square&labelColor=000)](LICENSE)
+[![Website](https://img.shields.io/badge/website-conducks.com-00ff66?style=flat-square&labelColor=000)](https://conducks.com)
+[![MCP](https://img.shields.io/badge/protocol-MCP-00ff66?style=flat-square&labelColor=000)](https://github.com/modelcontextprotocol)
 
-**Engineering governance for AI coding agents.**
-
-*The MCP server that encodes senior engineering judgment into mandatory logic patterns.*
-
-[![Version](https://img.shields.io/badge/version-0.6.4-brightgreen.svg?style=flat-square&color=00ff66&labelColor=000)](https://github.com/Conducks/conducks)
-[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square&color=00ff66&labelColor=000)](https://opensource.org/licenses/MIT)
-[![MCP](https://img.shields.io/badge/protocol-MCP-brightgreen.svg?style=flat-square&color=00ff66&labelColor=000)](https://github.com/modelcontextprotocol)
-
-</div>
+Welcome to the **CONDUCKS** ecosystem. We build tools that bridge the gap between "vibe-coding" and production-grade engineering by providing AI agents with the architectural laws and execution standards they must follow.
 
 ---
 
-## What We Build
+## 🏛️ Our Mission
 
-**CONDUCKS** is an open-source [Model Context Protocol (MCP)](https://github.com/modelcontextprotocol) server.
+**CONDUCKS** (Consolidating Documents | Unified Engineering Rules, Templates & Standards Engine) delivers documentation-driven governance via the **Model Context Protocol (MCP)**.
 
-It acts as an **engineering constitution** for AI coding agents — enforcing planning discipline, execution standards, verification laws, and design rules at the tool level, so agents can't vibe-code their way through your codebase.
-
----
-
-## The Problem
-
-AI agents by default:
-
-- Skip planning and jump straight to code
-- Ship bugs because there's no mandatory verification step
-- Lose all context between sessions
-- Hardcode values, scatter types, and ignore architecture
+We believe that for AI to build reliable software at scale, it needs more than just a prompt — it needs a **Source of Truth** for:
+- 🏗️ **Architecture**: How components interact and where state lives.
+- 🚀 **Lifecycle**: The mandatory loop of **Plan → Execute → Verify → Remember.**
+- 💅 **Styling**: Consistent design systems (Tailwind v4, Theme Patterns).
+- 🔒 **Security**: Proactive audits and data handling standards.
 
 ---
 
-## The Solution: 4-Phase Governance
+## 📂 Repositories
 
-```
-Plan → Execute → Verify → Remember
-```
-
-Each phase is enforced by a dedicated MCP tool that returns mandatory rules agents must follow before proceeding.
-
----
-
-## 7 Governance Tools
-
-| Tool | Phase | Enforces |
-|---|---|---|
-| `conducks.plan` | 1 | Codebase analysis, task atomicity, approval gates |
-| `conducks.execute` | 2 | Clean code mandates, root-cause fixation, orchestration |
-| `conducks.verify` | 3 | Test requirements, diff audits, output validation |
-| `conducks.memory` | 4 | Cross-session persistence of critical findings |
-| `conducks.documentation` | Standard | `docs/project/` lifecycle parity |
-| `conducks.design_style` | Standard | Anti-Vibe Manifesto, Tailwind v4 @theme |
-| `conducks.next_blueprint` | Standard | Service isolation, Manager Pattern |
+| Repository | Purpose | Primary Tech |
+| :--- | :--- | :--- |
+| [**`conducks`**](https://github.com/Conducks/conducks) | The core MCP server and governance engine. | TypeScript, MCP SDK |
+| [**`website`**](https://github.com/Conducks/website) | The public face and documentation viewer. | React, Vite, CSS |
 
 ---
 
-## Quick Start
+## 🏁 Get Started with CONDUCKS
+
+To install the CONDUCKS governance engine into your AI workflow:
 
 ```bash
-# Clone
 git clone https://github.com/Conducks/conducks
-
-# Build the MCP server
-cd conducks/conducks && npm install && npm run build
-
-# Add to your agent config (VS Code, Cursor, Antigravity, Windsurf, Claude Desktop...)
+cd conducks/conducks
+npm install && npm run build
 ```
+
+Then add the server to your MCP config:
 
 ```json
 {
-  "conducks": {
-    "command": "node",
-    "args": ["/path/to/conducks/dist/index.js"]
+  "mcpServers": {
+    "conducks": {
+      "command": "node",
+      "args": ["/absolute/path/to/conducks/build/index.js"]
+    }
   }
 }
 ```
 
 ---
 
-## Repositories
+## ⚖️ Open-Source Governance
 
-| Repo | Description |
-|---|---|
-| [`conducks`](./conducks/) | The MCP server — 7 tools, 7 resources, governance rules |
-| [`website`](./website/) | This documentation site (Next.js 16 + Tailwind v4) |
+All work in this organization is licensed under the **Apache License 2.0**. We are a contribution-friendly ecosystem, but we require all contributors to agree to our **Contributor License Agreement (CLA)** to ensure the project remains sustainable and flexible.
 
----
-
-## Works With
-
-VS Code · Cursor · Antigravity · Windsurf · Claude Desktop · Any MCP-compatible client
+- 📖 [**Contributing Guidelines**](https://github.com/Conducks/conducks/blob/main/CONTRIBUTING.md)
+- ⚖️ [**Contributor License Agreement**](https://github.com/Conducks/conducks/blob/main/CLA.md)
+- 🛡️ [**Security Policy**](https://github.com/Conducks/conducks/blob/main/SECURITY.md)
 
 ---
 
-<div align="center">
-
-*Getting your ducks in a row since 2025.*
-
-**[→ conducks.com](https://conducks.com)** · **[→ GitHub](https://github.com/Conducks/conducks)**
-
-</div>
+*“Getting your ducks in a row — one commit at a time.”*
